@@ -1,9 +1,10 @@
 package main
 
 import (
-	"flag"
 	"log"
+	"os"
 
+	"github.com/joho/godotenv"
 	tgClient "github.com/yowie645/ReadItLaterBot/clients/telegram"
 	eventconsumer "github.com/yowie645/ReadItLaterBot/consumer/event-consumer"
 	"github.com/yowie645/ReadItLaterBot/events/telegram"
@@ -17,8 +18,14 @@ const (
 )
 
 func main() {
+	if err := godotenv.Load(); err != nil {
+		log.Fatal("Error loading .env file")
+	}
 
-	eventsProcessor := telegram.New(tgClient.New(tgBotHost, mustToken()), files.New(storagePath))
+	eventsProcessor := telegram.New(
+		tgClient.New(tgBotHost, mustToken()),
+		files.New(storagePath),
+	)
 
 	log.Print("service started")
 
@@ -29,12 +36,9 @@ func main() {
 }
 
 func mustToken() string {
-	token := flag.String("token-bot", "", "token for access to telegram bot")
-
-	flag.Parse()
-
-	if *token == "" {
-		log.Fatal("token is not specifed")
+	token := os.Getenv("TELEGRAM_BOT_TOKEN")
+	if token == "" {
+		log.Fatal("TELEGRAM_BOT_TOKEN is not set in .env file")
 	}
-	return *token
+	return token
 }
