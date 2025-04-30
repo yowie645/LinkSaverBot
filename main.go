@@ -4,18 +4,28 @@ import (
 	"flag"
 	"log"
 
-	"github.com/yowie645/ReadItLaterBot/clients/telegram"
+	tgClient "github.com/yowie645/ReadItLaterBot/clients/telegram"
+	eventconsumer "github.com/yowie645/ReadItLaterBot/consumer/event-consumer"
+	"github.com/yowie645/ReadItLaterBot/events/telegram"
+	"github.com/yowie645/ReadItLaterBot/storage/files"
 )
 
 const (
-	tgBotHost = "api.telegram.org"
+	tgBotHost   = "api.telegram.org"
+	storagePath = "storage"
+	bathSize    = 100
 )
 
 func main() {
-	tgClient := telegram.New(tgBotHost, mustToken())
-	//fetcher = fetcher.New(tgClient)
-	//processor = processor.New(tgClient)
-	//consumer.Start(fetcher, processor)
+
+	eventsProcessor := telegram.New(tgClient.New(tgBotHost, mustToken()), files.New(storagePath))
+
+	log.Print("service started")
+
+	consumer := eventconsumer.New(eventsProcessor, eventsProcessor, bathSize)
+	if err := consumer.Start(); err != nil {
+		log.Fatal("service is stopped", err)
+	}
 }
 
 func mustToken() string {
