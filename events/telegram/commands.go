@@ -46,7 +46,6 @@ func (p *Processor) savePage(chatID int, pageUrl string, username string) error 
 		UserName: username,
 	}
 
-	// Проверяем, существует ли уже страница
 	isExists, err := p.storage.IsExists(page)
 	if err != nil {
 		return err

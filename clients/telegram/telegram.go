@@ -67,7 +67,6 @@ func (c *Client) SendMessage(chatId int, text string) error {
 }
 
 func (c *Client) doRequest(method string, query url.Values) (data []byte, err error) {
-
 	defer func() { err = e.WrapIfErr("can't do request", err) }()
 
 	u := url.URL{
@@ -84,14 +83,16 @@ func (c *Client) doRequest(method string, query url.Values) (data []byte, err er
 	req.URL.RawQuery = query.Encode()
 
 	resp, err := c.client.Do(req)
-
 	if err != nil {
 		return nil, err
 	}
-
 	defer func() { _ = resp.Body.Close() }()
-	body, err := io.ReadAll(req.Body)
 
+	if resp.StatusCode != http.StatusOK {
+		return nil, e.Wrap("unexpected status code", err)
+	}
+
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}
