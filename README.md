@@ -56,12 +56,26 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 
 ---
 
-### 🪭 Installation
+## 🛠️ Installation
 
-- **Prerequisites**
+### Prerequisites
 
-- Go 1.20+
+- [Go 1.20+](https://golang.org/dl/)
+- Telegram Bot Token (get from [@BotFather](https://t.me/BotFather))
 
-- Telegram Bot Token from ![@BotFather](https://t.me/BotFather)
+### 🪭 Quick Setup
+
+# Clone repository
+
+git clone https://github.com/yourusername/LinkSaverBot.git
+cd LinkSaverBot
+
+# Configure bot token
+
+echo "BOT_TOKEN=your_token_here" > .env
+
+# Run the bot
+
+go run main.go
 
 Give LinkSaverBot a try and never lose track of your favorite links again!
