@@ -63,18 +63,18 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 - [Go 1.20+](https://golang.org/dl/)
 - Telegram Bot Token (get from [@BotFather](https://t.me/BotFather))
 
-# 🪭 Quick Setup
+## 🪭 Quick Setup
 
-## Clone repository
+### Clone repository
 
 git clone https://github.com/yourusername/LinkSaverBot.git
 cd LinkSaverBot
 
-## Configure bot token
+### Configure bot token
 
 echo "BOT_TOKEN=your_token_here" > .env
 
-## Run the bot
+### Run the bot
 
 go run main.go
 
