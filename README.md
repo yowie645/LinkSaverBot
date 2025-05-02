@@ -67,7 +67,7 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 
 ### Clone repository
 
-- git clone https://github.com/yourusername/LinkSaverBot.git
+- git clone https://github.com/yowie645/LinkSaverBot.git
 - cd LinkSaverBot
 
 ### Configure bot token
