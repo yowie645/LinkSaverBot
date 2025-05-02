@@ -78,4 +78,4 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 
 - go run main.go
 
-Give LinkSaverBot a try and never lose track of your favorite links again!
+Give LinkSaverBot a try and never lose track of your favorite links again!!
