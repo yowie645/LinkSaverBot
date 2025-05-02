@@ -50,4 +50,12 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 
 ---
 
+### 🪭 Installation
+
+- **Prerequisites**
+
+- Go 1.20+
+
+- Telegram Bot Token (from ![@BotFather](https://t.me/BotFather))
+
 Give LinkSaverBot a try and never lose track of your favorite links again!
