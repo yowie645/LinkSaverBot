@@ -67,15 +67,15 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 
 ### Clone repository
 
-git clone https://github.com/yourusername/LinkSaverBot.git
-cd LinkSaverBot
+- git clone https://github.com/yourusername/LinkSaverBot.git
+- cd LinkSaverBot
 
 ### Configure bot token
 
-echo "BOT_TOKEN=your_token_here" > .env
+- echo "BOT_TOKEN=your_token_here" > .env
 
 ### Run the bot
 
-go run main.go
+- go run main.go
 
 Give LinkSaverBot a try and never lose track of your favorite links again!
