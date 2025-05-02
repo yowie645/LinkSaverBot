@@ -74,3 +74,13 @@ func (s *Storage) IsExists(ctx context.Context, page *storage.Page) (bool, error
 	}
 	return count > 0, nil
 }
+
+// Init creates the pages table if it doesn't exist.
+func (s *Storage) Init(ctx context.Context) error {
+	q := `CREATE TABLE IF NOT EXISTS pages (url TEXT, user_name TEXT)`
+
+	if _, err := s.db.ExecContext(ctx, q); err != nil {
+		return fmt.Errorf("can't create table: %w", err)
+	}
+	return nil
+}
