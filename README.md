@@ -33,15 +33,18 @@ LinkSaverBot is a lightweight, fast, and efficient Telegram bot written in **Go*
 
 ### 🤖 Example of a bot interface
 
-- Command `/start`
+- **Command** `/start`
+
   ![Command /start](screenshots/start.jpg)
   _Welcome to the bot’s main menu — your gateway to effortless link saving and exploration._
 
-- Command `/help`
+- **Command** `/help`
+
   ![Command /help](screenshots/help.jpg)
   _Helpful instructions at your fingertips — learn how to save links quickly and efficiently._
 
-- Command `/random`
+- **Command** `/random`
+
   ![Command /random](screenshots/random.jpg)
   _Discover hidden treasures from your saved collection with a simple `/random` command._
 
