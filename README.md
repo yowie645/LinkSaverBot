@@ -42,7 +42,7 @@ _Helpful instructions at your fingertips — learn how to save links quickly and
 ![Command /random](screenshots/random.jpg)
 _Discover hidden treasures from your saved collection with a simple `/random` command._
 
-![Error handling of an existing link](screenshots/double.jpg)
+![Error handling of an existing link](sсreenshots/double.jpg)
 _Smart duplicate detection — the bot kindly lets you know if you've already saved that link._
 
 ![error handling if the user has not uploaded any links](screenshots/noSavedLinks.jpg)
@@ -56,6 +56,6 @@ _Friendly reminder when no links are saved yet — encouraging you to start your
 
 - Go 1.20+
 
-- Telegram Bot Token (from ![@BotFather](https://t.me/BotFather))
+- Telegram Bot Token from ![@BotFather](https://t.me/BotFather)
 
 Give LinkSaverBot a try and never lose track of your favorite links again!
