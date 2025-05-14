@@ -1,6 +1,6 @@
 <img src="screenshots/prev.jpg" width="100%" height="200px" alt="Preview">
 
-<h1 align="center">💫 About Project:</h1>
+<h1 align="center">💫 About Project</h1>
 
 ## 🧸 LinkSaverBot — Your Personal Telegram Bookmarking Assistant
 
